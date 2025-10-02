@@ -40,7 +40,8 @@
                       "type": "string",
                       "description": "Text describing the next service date."
                     }
-                  }
+                  },
+                  "required": ["message"]
                 }
               }
             }
