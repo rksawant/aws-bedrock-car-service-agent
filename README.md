@@ -27,26 +27,6 @@ This project is perfect to demonstrate:
 - ✅ Realistic use case (car service)
 - ✅ API deployment and testing
 
-## 📝 Folder Structure
-aws-bedrock-car-service-agent/
-│
-├── lambda/
-│   ├── car_service_info/
-│   │   ├── lambda_function.py
-│   │   └── requirements.txt
-│
-├── agent/
-│   ├── openapi_action_schema.json
-│   ├── agent_instructions.md
-│
-├── docs/
-│   ├── architecture-diagram.png
-│   └── setup-guide.md
-│
-├── .gitignore
-├── README.md
-└── LICENSE
-
 
 ## 📜 License
 MIT License
