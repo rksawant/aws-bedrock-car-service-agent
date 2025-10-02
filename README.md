@@ -20,7 +20,7 @@ The agent can:
 ## 📝 Architecture
 User → Bedrock Agent → Claude Model + Lambda Action → Response
 
-## 💼 Interview Tip
+## 💼 Tip
 This project is perfect to demonstrate:
 - ✅ AWS Bedrock Agent setup
 - ✅ Lambda integration with OpenAPI schema
