@@ -1,10 +1,15 @@
 {
   "openapi": "3.0.0",
-  "info": { "title": "Car Service API", "version": "1.0.0" },
+  "info": {
+    "title": "Car Service API",
+    "version": "1.0.0",
+    "description": "API schema for fetching car service details by plate number."
+  },
   "paths": {
     "/serviceinfo": {
       "post": {
         "summary": "Get service info",
+        "description": "Fetches car service details using the provided vehicle plate number.",
         "operationId": "GetServiceInfo",
         "requestBody": {
           "required": true,
@@ -13,7 +18,10 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "plate_number": { "type": "string" }
+                  "plate_number": {
+                    "type": "string",
+                    "description": "Vehicle registration number."
+                  }
                 },
                 "required": ["plate_number"]
               }
@@ -22,17 +30,26 @@
         },
         "responses": {
           "200": {
-            "description": "Service info found",
+            "description": "Service info successfully retrieved.",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "message": { "type": "string" }
+                    "message": {
+                      "type": "string",
+                      "description": "Text describing the next service date."
+                    }
                   }
                 }
               }
             }
+          },
+          "400": {
+            "description": "Invalid request."
+          },
+          "500": {
+            "description": "Internal server error."
           }
         }
       }
